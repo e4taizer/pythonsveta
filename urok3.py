@@ -44,3 +44,20 @@
 # number=2
 # number=number + 2.5
 # print(type(number))
+# x =123
+# print(x)
+# x = "i am string value now"
+# print(x)
+# x = True
+# print(x)
+# number: int = 25
+# string: str = "Hello"
+# another_number: float = 4.5
+# print(number)
+# number = "Hello world"
+# print(number)
+###########################
+# a=42
+# b=a
+# print(id(a))
+# print(id(b))
