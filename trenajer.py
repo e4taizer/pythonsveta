@@ -31,3 +31,24 @@
 # if v == a and v
 #     print("Текст, который будет выведен")
 
+# name = input("Enter your name: ")
+#
+# # Выводим приветствие с использованием введенного имени
+# print("Hello", name)
+#######################################################
+# stroka = "Abrakadabra"
+# print(len(stroka))
+#######################################################
+# str1 = input()
+# count_str1 = str1.count("",0,-1)
+# print (count_str1)
+###########################################
+# str1 = input()
+# len_str1 = len(str1)
+# print (len_str1)
+# text = input()
+# word_count = count_words(text)
+# print(f"Количество слов в тексте: {word_count}")
+# str1 = str(input())
+# print(str1.count("")+1)
+print(input().count('') +1)
