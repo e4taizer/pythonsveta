@@ -198,3 +198,10 @@
 #     },
 #     "key3":[1,2,3]
 # }
+# nested_dict = {
+#     'person': {'name': 'Alice', 'age': 30},
+#     'job': {'title': 'Engineer', 'salary': 50000}
+# }
+
+
+# Итерация по вложенным словарям
