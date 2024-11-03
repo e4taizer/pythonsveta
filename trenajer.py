@@ -51,4 +51,8 @@
 # print(f"Количество слов в тексте: {word_count}")
 # str1 = str(input())
 # print(str1.count("")+1)
-print(input().count('') +1)
+# print(input().count('') +1)
+# a = "text"
+# b= "test"
+# c =("_".join(a))
+# print(c)
