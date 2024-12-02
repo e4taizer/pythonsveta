@@ -101,4 +101,4 @@ class Compare_fraction(Fraction):
 
 drob3 =Compare_fraction(5,10)
 drob4 = Compare_fraction(11,12)
-print(drob1>=new_drob2)
+print(drob1>=new_drob2) #
