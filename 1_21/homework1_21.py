@@ -58,11 +58,19 @@
 # print("Нечетные числа:", result["odd"])
 ###############################################################
 #Задание №3
-from collections import OrderedDict
+from collections import  deque
 class Ochered:
-    def __init__(self,data):
-        self.data = data
+    def __init__(self):
+        self.data = deque()
 
+class Dobavlenie_v_nachalo(Ochered):
+    def dob(self,value):
+        self.data.appendleft(value)
+queue = Dobavlenie_v_nachalo()
+queue.dob(10)
+queue.dob(20)
+
+print(queue.data)
 
 
 
