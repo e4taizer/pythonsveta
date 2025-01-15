@@ -56,6 +56,18 @@
 # # Итоговый вывод
 # print("Четные числа:", result["even"])
 # print("Нечетные числа:", result["odd"])
+###############################################################
+#Задание №3
+from collections import OrderedDict
+class Ochered:
+    def __init__(self,data):
+        self.data = data
+
+
+
+
+Ochered
+
 
 
 
