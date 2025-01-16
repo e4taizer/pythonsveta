@@ -60,19 +60,23 @@
 #Задание №3
 from collections import  deque
 class Ochered:
+
     def __init__(self):
         self.data = deque()
 
-class Dobavlenie_v_nachalo(Ochered):
-    def dob(self,value):
-        self.data.appendleft(value)
-queue = Dobavlenie_v_nachalo()
-queue.dob(10)
-queue.dob(20)
 
-print(queue.data)
+    def dob(self,values:list):
+        for value in values:
+            self.data.appendleft(value)
 
 
+    def dobi(self,values:list):
+        for value in values:
+            self.data.append(value)
+a= Ochered()
+a.dob([11111,222,1144,555])
+a.dobi([1,2,3])
+print(a.data)
 
 Ochered
 
