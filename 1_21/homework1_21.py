@@ -65,18 +65,28 @@ class Ochered:
         self.data = deque()
 
 
-    def dob(self,values:list):
+    def dob_v_nachalo(self,values:list):
         for value in values:
             self.data.appendleft(value)
 
 
-    def dobi(self,values:list):
+    def dob_v_konec(self,values:list):
         for value in values:
             self.data.append(value)
+
+    def ydalenie_c_nachala(self):
+
+           return self.data.popleft()
+
 a= Ochered()
-a.dob([11111,222,1144,555])
-a.dobi([1,2,3])
+a.dob_v_nachalo([4,5,6])
 print(a.data)
+
+a.dob_v_konec([1,2,3])
+print(a.data)
+
+remove_item=a.ydalenie_c_nachala()
+print(f"{a.data} Удаленный элемент: {remove_item}")
 
 Ochered
 
