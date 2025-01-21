@@ -78,15 +78,26 @@ class Ochered:
 
            return self.data.popleft()
 
+    @property
+    def ydalenie_c_konza(self):
+        return self.data.pop()
+    def __len__(self):
+        return len(self.data)
+
 a= Ochered()
 a.dob_v_nachalo([4,5,6])
-print(a.data)
+print(a)
 
 a.dob_v_konec([1,2,3])
 print(a.data)
 
-remove_item=a.ydalenie_c_nachala()
-print(f"{a.data} Удаленный элемент: {remove_item}")
+remove_item_nachalo=a.ydalenie_c_nachala()
+print(f"{a.data} Удаленный элемент с начала : {remove_item_nachalo}")
+remove_item_konez = a.ydalenie_c_konza
+print(f"{a.data} Удаленный элемент c  конца: {remove_item_konez}")
+print(len(a.data))
+
+
 
 Ochered
 
