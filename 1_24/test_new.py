@@ -7,7 +7,7 @@ logging.basicConfig(
     format="%(asctime)s [%(levelname)s] %(message)s",  # Формат логов
     datefmt="%Y-%m-%d %H:%M:%S",
     handlers=[
-        logging.FileHandler("test_log.txt"),  # Запись в файл
+       # logging.FileHandler("test_log.txt"),  # Запись в файл
         logging.StreamHandler()  # Вывод в консоль
     ]
 )
@@ -22,7 +22,7 @@ logger = logging.getLogger(__name__)
         (2, 3, True),
         (5, 1, False),
         (10, 10, False),
-        (7, 8, True)
+        (11, 8, True)
     ]
 )
 def test_compare(x, y, expected):

@@ -1,6 +1,16 @@
 import  pytest
 import logging
-logging.basicConfig(level=logging.DEBUG)
+
+logging.basicConfig(
+    level=logging.INFO,  # Уровень логирования
+    format="%(asctime)s [%(levelname)s] %(message)s",  # Формат логов
+    datefmt="%Y-%m-%d %H:%M:%S",
+    handlers=[
+
+        logging.StreamHandler()  # Вывод в консоль
+    ]
+)
+
 # def test_addition():
 #     assert 2 + 2 == 4
 #
@@ -18,29 +28,29 @@ logging.basicConfig(level=logging.DEBUG)
 
 
 
-def test_my_function(caplog):
-    logger = logging.getLogger(__name__)
-    logger.warning("Это предупреждение!")
-
-    # Проверка, что предупреждение было записано
-    assert "Это предупреждение!" in caplog.text
+logger = logging.getLogger(__name__)
 
 @pytest.mark.parametrize(
 
-    "x,y",
-    [(3,4),
-     (5,6),
-     (150,100)
+    "x,y,expected",
+    [(3,4,True),
+     (5,6,True),
+     (150,100,False)
 
     ]
 )
-def test_compare(base_number,x, y):
+def test_compare(base_number,x, y,expected):
+    logger.info(f"🔄 Запуск теста: x={x}, y={y}, base_number+x={base_number+x}")
     print(f"Тестируем с параметрами: {base_number+x}, {y}")
-    assert base_number+y >= x
+    try:
+        result =  base_number+x >= y
+        assert result == expected
+        logger.info(f"✅ Тест пройден: {x+base_number} < {y} → {result} (ожидалось {expected})")
 
-logger = logging.getLogger(__name__)
+    except AssertionError:
+        logger.error(f"❌ Ошибка: {x+base_number} < {y} → {result} (ожидалось {expected})")
+        raise  # Поднимаем исключение для фиксации в pytest
 
-@pytest.mark.parametrize("x, y", [(1, 2), (3, 4)])
-def test_example(x, y):
-    logger.info(f"Тестируем с параметрами: {x}, {y}")
-    assert x < y
+
+
+
